@@ -61,52 +61,6 @@ android {
 //            }
         }
 
-        envTest {
-            minifyEnabled true
-            zipAlignEnabled true
-            debuggable true
-//            minifyEnabled false
-//            zipAlignEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.tuia
-//            applicationVariants.all {
-//                variant ->    variant.outputs.each { output ->
-//                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                        if (project.hasProperty('OUT_PUT_DIR_PARA')) {
-//                            File output_dir1 = file("${OUT_PUT_DIR_PARA}");
-//                            output.outputFile = new File(output_dir1,"XXX${releaseTime()}.apk")
-//                        } else {
-//                            output.outputFile = new File(outputFile.parent, "XXX${releaseTime()}.apk")
-//                        }
-//                    }
-//                }
-//            }
-        }
-
-        envPre {
-            minifyEnabled false
-            zipAlignEnabled false
-            debuggable true
-//            minifyEnabled false
-//            zipAlignEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.tuia
-//            applicationVariants.all {
-//                variant ->    variant.outputs.each { output ->
-//                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                        if (project.hasProperty('OUT_PUT_DIR_PARA')) {
-//                            File output_dir1 = file("${OUT_PUT_DIR_PARA}");
-//                            output.outputFile = new File(output_dir1,"XXX${releaseTime()}.apk")
-//                        } else {
-//                            output.outputFile = new File(outputFile.parent, "XXX${releaseTime()}.apk")
-//                        }
-//                    }
-//                }
-//            }
-        }
-
         release {
             minifyEnabled true
             zipAlignEnabled true
@@ -146,7 +100,7 @@ allprojects {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    implementation ('com.tuia:sdk:1.0.0.3.4'){
+    implementation ('com.tuia:sdk:1.0.0.3.8'){
         transitive = true
     }
     implementation 'com.android.support:appcompat-v7:28.0.0'
