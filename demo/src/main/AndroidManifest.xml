@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lechuan.midunovel.demo">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".SdkApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="tuia-online"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label">
+
+        <!-- 推啊appkey -->
+        <meta-data
+            android:name="TUIA_APPKEY"
+            android:value="kEzAJT4iRMMag29Z7yWcJGfcVgG" />
+
+        <meta-data
+            android:name="TUIA_APPSECRET"
+            android:value="3Wq4afvvdPhyHBR29LgRwEC16gkrrFXZ5BRoL2E" />
+
+        <!--<meta-data-->
+            <!--android:name="TUIA_APPKEY"-->
+            <!--android:value="2ZjLbhEBCFAzBbihEtxLEq25mXKw" />-->
+
+        <!--<meta-data-->
+            <!--android:name="TUIA_APPSECRET"-->
+            <!--android:value="3WjgVkeo3j4GFm9vdcZbYp48TdDncr3NcNNpkLu" />-->
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SbannerActivity" />
+        <activity android:name=".BannerActivity" />
+        <activity android:name=".InterstitialActivity" />
+        <activity android:name=".NativeAdActivity" />
+        <activity android:name=".AppWallActivity" />
+        <activity android:name=".DobberActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".NonStandarActivity" />
+        <activity android:name=".VideoActivity"/>
+    </application>
+
+</manifest>

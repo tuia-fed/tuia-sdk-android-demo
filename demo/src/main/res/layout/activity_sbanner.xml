@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lechuan.midunovel.view.FoxStreamerView
+        android:id="@+id/TMBrView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:fox_size="lander_foxBr"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"/>
+
+</LinearLayout>
