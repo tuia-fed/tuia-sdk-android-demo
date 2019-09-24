@@ -29,9 +29,9 @@ AndroidSDK 对接指南：
 2.app下的build.gradle添加：(最小支持minSdkVersion 15)
 
     dependencies {
-        implementation ('com.tuia:sdk:1.0.0.3.4'){
-            transitive = true
-        }
+        implementation ('com.tuia:sdk:1.0.0.0'){
+        	transitive = true
+    	}
     }
     
 #二.权限(sdk内部已经处理相关权限问题，如果遇到冲突咨询对应开发即可)
