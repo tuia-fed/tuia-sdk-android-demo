@@ -547,9 +547,9 @@ AndroidSDK 对接指南：
 
 
             
-####.返回奖励信息 回调onAdReward（激励类型广告使用，非激励类型广告不需要）
+####.返回奖励信息 回调onAdReward(String data)（激励类型广告使用，非激励类型广告不需要）
 
-
+    data：
     {
 	    "finishType" : 1,
 	    "orderId" : "168408070629",
