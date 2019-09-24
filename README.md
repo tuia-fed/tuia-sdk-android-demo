@@ -1,7 +1,6 @@
 推啊SDK产品介绍：
 
-    SDK介绍：
-    [link](https://yun.duiba.com.cn/tuia/sdk/推啊SDK介绍.pdf)
+    [SDK介绍](https://yun.duiba.com.cn/tuia/sdk/推啊SDK介绍.pdf) 
 
 AndroidSDK 对接指南：
 
