@@ -1,4 +1,4 @@
-Android对接领奖：
+AndroidSDK 对接指南：
 
 #一.依赖引入
 
