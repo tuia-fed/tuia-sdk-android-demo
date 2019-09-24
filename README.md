@@ -1,6 +1,7 @@
-推啊SDK产品介绍：
+推啊广告基础SDk:
 
-    [SDK介绍](https://yun.duiba.com.cn/tuia/sdk/推啊SDK介绍.pdf) 
+推啊SDK产品介绍： 
+[SDK介绍](https://yun.duiba.com.cn/tuia/sdk/推啊SDK介绍.pdf) 
 
 AndroidSDK 对接指南：
 
