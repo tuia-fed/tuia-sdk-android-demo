@@ -145,7 +145,7 @@ AndroidSDK 对接指南：
     }
     
     
-###2.横幅广告接入（开屏广告嵌入代码说明（详见demo代码））
+###2.横幅广告接入（横幅广告嵌入代码说明（详见demo代码））
 
 ####第一步：xml中引入布局文件
 
@@ -235,7 +235,7 @@ AndroidSDK 对接指南：
 
 
 
-###3.浮标广告接入（开屏广告嵌入代码说明（详见demo代码））
+###3.浮标广告接入（浮标广告嵌入代码说明（详见demo代码））
 
 ####第一步：xml中引入布局文件
 
@@ -318,7 +318,7 @@ AndroidSDK 对接指南：
     }
 
     
-###4.插屏广告接入（开屏广告嵌入代码说明（详见demo代码））
+###4.插屏广告接入（插屏广告嵌入代码说明（详见demo代码））
     
 ####：代码直接引入
 
@@ -380,7 +380,7 @@ AndroidSDK 对接指南：
     }
 
 
-###5.应用墙广告接入（开屏广告嵌入代码说明（详见demo代码））
+###5.应用墙广告接入（应用墙广告嵌入代码说明（详见demo代码））
 
 ####第一步：xml中引入布局文件
 
@@ -467,7 +467,7 @@ AndroidSDK 对接指南：
 
 
     
-###6.Banner广告接入（开屏广告嵌入代码说明（详见demo代码））
+###6.Banner广告接入（Banner广告嵌入代码说明（详见demo代码））
 
 ####第一步：xml中引入布局文件
 
@@ -487,6 +487,9 @@ AndroidSDK 对接指南：
     </LinearLayout>
     
 ###第二步：代码引入
+	
+广告曝光的时候调用 mOxCustomerTm.adExposed();
+广告点击曝光的时候调       //mOxCustomerTm.adClicked();
 
     public class BannerActivity extends BaseActivity {
     private FoxStreamerView mTMBrAdView;
@@ -544,7 +547,58 @@ AndroidSDK 对接指南：
         super.onDestroy();
         }
     }
+    
+###7.自定义广告接入（自定义广告嵌入代码说明（详见demo代码））  
+####：代码直接引入
 
+    public class NonStandarActivity extends BaseActivity {
+    private FoxCustomerTm mOxCustomerTm;
+
+    private TextView textView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_non_standar);
+        textView = (TextView)findViewById(R.id.content_text);
+        String userId = getIntent().getStringExtra("userId");
+
+        mOxCustomerTm = new FoxCustomerTm(this);
+        mOxCustomerTm.loadAd(304507,userId);
+
+        mOxCustomerTm.setAdListener(new FoxNsTmListener() {
+            @Override
+            public void onReceiveAd(String result) {
+                Log.d("========", "onReceiveAd:"+result);
+                textView.setText(result);
+            }
+
+            @Override
+            public void onFailedToReceiveAd() {
+                Log.d("========", "onFailedToReceiveAd");
+            }
+
+            @Override
+            public void onAdReward(String data) {
+
+            }
+        });
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        if (mOxCustomerTm != null) {
+            mOxCustomerTm.destroy();
+        }
+
+        super.onDestroy();
+    }
+    }
+    
+    广告曝光的时候必须调用 
+    mOxCustomerTm.adExposed();
+    广告点击的时候必须调      
+    mOxCustomerTm.adClicked();
 
             
 ####.返回奖励信息 回调onAdReward(String data)（激励类型广告使用，非激励类型广告不需要）
