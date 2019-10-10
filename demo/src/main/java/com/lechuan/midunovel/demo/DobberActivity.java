@@ -60,7 +60,6 @@ public class DobberActivity extends BaseActivity {
                 Log.d("========", "onAdReward");
             }
         });
-//        mOxWallView.loadAd(463);
         mOxWallView.loadAd(301971,userId);
     }
 
