@@ -58,7 +58,6 @@
         android:text="自定义"/>
 
    <Button
-       android:visibility="gone"
         android:id="@+id/nsVideoButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"

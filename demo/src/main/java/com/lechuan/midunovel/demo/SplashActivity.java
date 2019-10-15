@@ -73,9 +73,10 @@ public class SplashActivity extends Activity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
+
         });
         mOXShView.loadAd(301978);
     }

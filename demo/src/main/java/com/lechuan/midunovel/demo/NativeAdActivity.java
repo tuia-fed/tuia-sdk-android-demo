@@ -52,9 +52,10 @@ public class NativeAdActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
+
         });
 //        mTMNaAdView.loadAd(461);
 //        mTMNaAdView1.loadAd(460);

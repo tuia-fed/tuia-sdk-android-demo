@@ -26,7 +26,7 @@ android {
         applicationId "com.lechuan.midunovel.demo"
 //        applicationId "com.lechuan.midunovel.test"
         minSdkVersion 14
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -100,7 +100,7 @@ allprojects {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    implementation ('com.tuia:sdk:1.0.0.2'){
+    implementation('com.tuia:sdk:1.1.0.0') {
         transitive = true
     }
     implementation 'com.android.support:appcompat-v7:28.0.0'

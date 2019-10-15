@@ -48,8 +48,8 @@ public class InterstitialActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
         });
 //        mTMItAd.loadAd(459);

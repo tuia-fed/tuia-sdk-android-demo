@@ -56,9 +56,10 @@ public class DobberActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
+
         });
         mOxWallView.loadAd(301971,userId);
     }

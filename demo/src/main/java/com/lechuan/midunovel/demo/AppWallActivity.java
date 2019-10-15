@@ -51,9 +51,10 @@ public class AppWallActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
+
         });
 
         mOxWallView2.setAdListener(new FoxListener() {
@@ -88,8 +89,8 @@ public class AppWallActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
 
         });

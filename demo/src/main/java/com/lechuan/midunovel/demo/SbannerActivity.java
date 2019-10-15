@@ -52,8 +52,8 @@ public class SbannerActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
         });
         mTMBrAdView.loadAd(301967,userId);//加载对应GGid

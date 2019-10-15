@@ -49,12 +49,11 @@ public class BannerActivity extends BaseActivity {
             }
 
             @Override
-            public void onAdReward(String data) {
-                Log.d("========", "onAdReward");
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
             }
         });
 
-//        mTMBrAdView.loadAd(462);
         mTMBrAdView.loadAd(301970,userId);
     }
 

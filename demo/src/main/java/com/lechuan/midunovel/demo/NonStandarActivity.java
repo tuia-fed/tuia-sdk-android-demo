@@ -34,11 +34,6 @@ public class NonStandarActivity extends BaseActivity {
             public void onFailedToReceiveAd() {
                 Log.d("========", "onFailedToReceiveAd");
             }
-
-            @Override
-            public void onAdReward(String msg) {
-
-            }
         });
 
 
