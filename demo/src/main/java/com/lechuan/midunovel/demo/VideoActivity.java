@@ -17,7 +17,7 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FoxVideoView magicVideoView =new FoxVideoView(getApplication(),
-                        "91200183954567", "", "301616", "", new FoxVideoListener() {
+                        "91200183954567", "", "312152", "", new FoxVideoListener() {
                     @Override
                     public void onFoxRequestRewardVideo() {
                         FoxLogger.jLog().d("onFoxRequestRewardVideo");
