@@ -5,8 +5,10 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.FoxListener;
 import com.lechuan.midunovel.view.FoxWallView;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +60,9 @@ public class DobberActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
+                if (!CommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
             }
 
         });

@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.TMItButton258092).setOnClickListener(this);
         findViewById(R.id.TMBrButton).setOnClickListener(this);
         findViewById(R.id.floatButton).setOnClickListener(this);
-        findViewById(R.id.appWButton).setOnClickListener(this);
         findViewById(R.id.nsButton).setOnClickListener(this);
-        findViewById(R.id.nsVideoButton).setOnClickListener(this);
         userId = getIntent().getStringExtra("userId");
 
     }
@@ -40,10 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Banner
                 intent = new Intent(this, BannerActivity.class);
                 break;
-            case R.id.appWButton:
-                //积分墙
-                intent = new Intent(this, AppWallActivity.class);
-                break;
             case R.id.floatButton:
                 //浮标
                 intent = new Intent(this, DobberActivity.class);
@@ -51,10 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.nsButton:
                 //自定义
                 intent = new Intent(this, NonStandarActivity.class);
-                break;
-            case R.id.nsVideoButton:
-                //激励视频
-                intent = new Intent(this, VideoActivity.class);
                 break;
             default:
                 return;

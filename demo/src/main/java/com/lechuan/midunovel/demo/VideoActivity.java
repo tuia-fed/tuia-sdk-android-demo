@@ -3,9 +3,12 @@ package com.lechuan.midunovel.demo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.tools.FoxLogger;
 import com.lechuan.midunovel.view.video.FoxVideoListener;
 import com.lechuan.midunovel.view.video.FoxVideoView;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 public class VideoActivity extends AppCompatActivity {
 
@@ -51,6 +54,9 @@ public class VideoActivity extends AppCompatActivity {
                     @Override
                     public void onFoxAdClose(String s) {
                         FoxLogger.jLog().d("onFoxAdClose"+s);
+                        if (!CommonUtils.isEmpty(s)){
+                            ToastUtils.showShort(s);
+                        }
                     }
 
                 });

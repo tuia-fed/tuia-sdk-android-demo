@@ -3,8 +3,10 @@ package com.lechuan.midunovel.demo;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.FoxListener;
 import com.lechuan.midunovel.view.FoxStreamerView;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 
 public class BannerActivity extends BaseActivity {
@@ -51,6 +53,9 @@ public class BannerActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
+                if (!CommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
             }
         });
 

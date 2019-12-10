@@ -42,29 +42,12 @@
         android:text="浮标"/>
 
     <Button
-        android:id="@+id/appWButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="应用墙"/>
-
-    <Button
         android:id="@+id/nsButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="自定义"/>
-
-   <Button
-        android:id="@+id/nsVideoButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="激励视频"/>
-
 
 </LinearLayout>
 
