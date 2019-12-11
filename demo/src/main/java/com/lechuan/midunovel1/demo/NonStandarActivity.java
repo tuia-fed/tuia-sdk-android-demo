@@ -5,13 +5,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
+import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxActivity;
 import com.lechuan.midunovel.view.FoxCustomerTm;
 import com.lechuan.midunovel.view.FoxNsTmListener;
 import com.lechuan.midunovel.view.video.Constants;
 import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
-import com.lechuan.midunovel.view.video.utils.FoxGsonUtil;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
+import com.lechuan.midunovel.view.video.util.GsonUtil;
 
 
 /**
@@ -46,8 +47,8 @@ public class NonStandarActivity extends BaseActivity {
             @Override
             public void onReceiveAd(String result) {
                 Log.d("========", "onReceiveAd:"+result);
-                if (!FoxBaseCommonUtils.isEmpty(result)){
-                    FoxResponseBean.DataBean dataBean = FoxGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
+                if (!CommonUtils.isEmpty(result)){
+                    FoxResponseBean.DataBean dataBean = GsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
                     if (dataBean!=null){
                         mDataBean = dataBean;
                     }
@@ -62,17 +63,13 @@ public class NonStandarActivity extends BaseActivity {
                 Log.d("========", "onFailedToReceiveAd");
             }
 
-            @Override
-            public void onAdActivityClose(String s) {
-
-            }
         });
 
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mDataBean!=null && !FoxBaseCommonUtils.isEmpty(mDataBean.getActivityUrl())){
+                if (mDataBean!=null && !CommonUtils.isEmpty(mDataBean.getActivityUrl())){
                     //素材点击时候调用素材点击曝光方法
                     mOxCustomerTm.adClicked();
                     FoxActivity.starActivity(NonStandarActivity.this,mDataBean.getActivityUrl(),Constants.BUNDLE_KEY_FROM_FOXCUSTOMERTM);

@@ -10,8 +10,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
+import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxShListener;
 import com.lechuan.midunovel.view.FoxShView;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 public class SplashActivity extends Activity {
 
@@ -75,6 +78,9 @@ public class SplashActivity extends Activity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
+                if (!CommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
             }
 
         });

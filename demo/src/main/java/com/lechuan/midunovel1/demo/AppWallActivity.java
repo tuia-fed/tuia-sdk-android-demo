@@ -3,8 +3,11 @@ package com.lechuan.midunovel1.demo;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxListener;
 import com.lechuan.midunovel.view.FoxWallView;
+import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 
 public class AppWallActivity extends BaseActivity {
@@ -53,7 +56,9 @@ public class AppWallActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-
+                if (!CommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
             }
 
         });
@@ -92,13 +97,13 @@ public class AppWallActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-
+                if (!CommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
             }
 
         });
 
-//        mOxWallView1.loadAd(464);
-//        mOxWallView2.loadAd(464);
         mOxWallView1.loadAd(301972,userId);
         mOxWallView2.loadAd(301972,userId);
     }

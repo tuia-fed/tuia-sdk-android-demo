@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.lechuan.midunovel.demo.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     String userId = null;
