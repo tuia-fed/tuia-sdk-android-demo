@@ -1,24 +1,25 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
+
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.FoxListener;
 import com.lechuan.midunovel.view.FoxStreamerView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
-
-public class BannerActivity extends BaseActivity {
+/**
+ * 横幅
+ */
+public class SbannerActivity extends BaseActivity {
 
     private FoxStreamerView mTMBrAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_banner);
-        String userId = getIntent().getStringExtra("userId");
+        setContentView(R.layout.activity_sbanner);
         mTMBrAdView = (FoxStreamerView) findViewById(R.id.TMBrView);
+        String userId = getIntent().getStringExtra("userId");
         mTMBrAdView.setAdListener(new FoxListener() {
             @Override
             public void onReceiveAd() {
@@ -42,24 +43,21 @@ public class BannerActivity extends BaseActivity {
 
             @Override
             public void onAdClick() {
-                Log.d("========", "onAdClick");
+                Log.d("========", "onClick");
             }
 
             @Override
             public void onAdExposure() {
-                Log.d("========", "onExposure");
+                Log.d("========", "onAdExposure");
             }
 
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-                if (!CommonUtils.isEmpty(s)){
-                    ToastUtils.showShort(s);
-                }
+
             }
         });
-
-        mTMBrAdView.loadAd(301970,userId);
+        mTMBrAdView.loadAd(301967,userId);//加载对应GGid
     }
 
     @Override
@@ -69,4 +67,5 @@ public class BannerActivity extends BaseActivity {
         }
         super.onDestroy();
     }
+
 }

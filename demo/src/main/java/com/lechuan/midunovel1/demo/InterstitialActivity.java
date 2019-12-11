@@ -1,32 +1,22 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.FoxListener;
-import com.lechuan.midunovel.view.FoxWallView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
+import com.lechuan.midunovel.view.FoxTbScreen;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class DobberActivity extends BaseActivity {
-
-    private ListView mListView;
-    private FoxWallView mOxWallView;
+public class InterstitialActivity extends BaseActivity {
+    private FoxTbScreen mTMItAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dobber);
-        mListView = (ListView) findViewById(R.id.list);
-        mOxWallView = (FoxWallView) findViewById(R.id.TMAw1);
+        setContentView(R.layout.activity_interstitial);
         String userId = getIntent().getStringExtra("userId");
-        mListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, getData()));
-        mOxWallView.setAdListener(new FoxListener() {
+        mTMItAd = new FoxTbScreen(this);
+        mTMItAd.setAdListener(new FoxListener() {
             @Override
             public void onReceiveAd() {
                 Log.d("========", "onReceiveAd");
@@ -60,29 +50,19 @@ public class DobberActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-                if (!CommonUtils.isEmpty(s)){
-                    ToastUtils.showShort(s);
-                }
+//                if (!CommonUtils.isEmpty(s)){
+//                    ToastUtils.showShort(s);
+//                }
             }
-
         });
-        mOxWallView.loadAd(301971,userId);
+//        mTMItAd.loadAd(459);
+        mTMItAd.loadAd(301968,userId);
     }
-
     @Override
     protected void onDestroy() {
-        if (mOxWallView != null) {
-            mOxWallView.destroy();
+        if (mTMItAd != null) {
+            mTMItAd.destroy();
         }
         super.onDestroy();
-    }
-
-    private List<String> getData() {
-
-        List<String> data = new ArrayList<String>();
-        for (int i = 0; i < 40; i++) {
-            data.add("测试数据" + i);
-        }
-        return data;
     }
 }

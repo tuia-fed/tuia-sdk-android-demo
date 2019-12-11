@@ -1,4 +1,4 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,10 +10,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.view.FoxShListener;
 import com.lechuan.midunovel.view.FoxShView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 public class SplashActivity extends Activity {
 
@@ -77,9 +75,6 @@ public class SplashActivity extends Activity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-                if (!CommonUtils.isEmpty(s)){
-                    ToastUtils.showShort(s);
-                }
             }
 
         });

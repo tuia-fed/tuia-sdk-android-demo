@@ -1,26 +1,23 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.lechuan.midunovel.view.FoxInfoStreamView;
 import com.lechuan.midunovel.view.FoxListener;
+import com.lechuan.midunovel.view.FoxStreamerView;
 
 
-public class NativeAdActivity extends BaseActivity {
+public class BannerActivity extends BaseActivity {
 
-
-    private FoxInfoStreamView mTMNaAdView;
-    private FoxInfoStreamView mTMNaAdView1;
+    private FoxStreamerView mTMBrAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_native_ad);
+        setContentView(R.layout.activity_banner);
         String userId = getIntent().getStringExtra("userId");
-        mTMNaAdView = (FoxInfoStreamView) findViewById(R.id.TMNaView);
-        mTMNaAdView1 = (FoxInfoStreamView) findViewById(R.id.TMNaView1);
-        mTMNaAdView.setAdListener(new FoxListener() {
+        mTMBrAdView = (FoxStreamerView) findViewById(R.id.TMBrView);
+        mTMBrAdView.setAdListener(new FoxListener() {
             @Override
             public void onReceiveAd() {
                 Log.d("========", "onReceiveAd");
@@ -48,28 +45,23 @@ public class NativeAdActivity extends BaseActivity {
 
             @Override
             public void onAdExposure() {
-                Log.d("========", "onAdExposure");
+                Log.d("========", "onExposure");
             }
 
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-            }
 
+            }
         });
-//        mTMNaAdView.loadAd(461);
-//        mTMNaAdView1.loadAd(460);
-        mTMNaAdView.loadAd(306438,userId);
-        mTMNaAdView1.loadAd(306438,userId);
+
+        mTMBrAdView.loadAd(301970,userId);
     }
 
     @Override
     protected void onDestroy() {
-        if (mTMNaAdView != null) {
-            mTMNaAdView.destroy();
-        }
-        if (mTMNaAdView1 != null) {
-            mTMNaAdView1.destroy();
+        if (mTMBrAdView != null) {
+            mTMBrAdView.destroy();
         }
         super.onDestroy();
     }

@@ -1,4 +1,4 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.content.Intent;
 import android.os.Bundle;

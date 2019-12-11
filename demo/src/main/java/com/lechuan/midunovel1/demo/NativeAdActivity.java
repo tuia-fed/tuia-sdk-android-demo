@@ -1,28 +1,26 @@
-package com.lechuan.midunovel.demo;
-
+package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.view.FoxInfoStreamView;
 import com.lechuan.midunovel.view.FoxListener;
-import com.lechuan.midunovel.view.FoxStreamerView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
-/**
- * 横幅
- */
-public class SbannerActivity extends BaseActivity {
 
-    private FoxStreamerView mTMBrAdView;
+public class NativeAdActivity extends BaseActivity {
+
+
+    private FoxInfoStreamView mTMNaAdView;
+    private FoxInfoStreamView mTMNaAdView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sbanner);
-        mTMBrAdView = (FoxStreamerView) findViewById(R.id.TMBrView);
+        setContentView(R.layout.activity_native_ad);
         String userId = getIntent().getStringExtra("userId");
-        mTMBrAdView.setAdListener(new FoxListener() {
+        mTMNaAdView = (FoxInfoStreamView) findViewById(R.id.TMNaView);
+        mTMNaAdView1 = (FoxInfoStreamView) findViewById(R.id.TMNaView1);
+        mTMNaAdView.setAdListener(new FoxListener() {
             @Override
             public void onReceiveAd() {
                 Log.d("========", "onReceiveAd");
@@ -45,7 +43,7 @@ public class SbannerActivity extends BaseActivity {
 
             @Override
             public void onAdClick() {
-                Log.d("========", "onClick");
+                Log.d("========", "onAdClick");
             }
 
             @Override
@@ -56,20 +54,23 @@ public class SbannerActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-                if (!CommonUtils.isEmpty(s)){
-                    ToastUtils.showShort(s);
-                }
             }
+
         });
-        mTMBrAdView.loadAd(301967,userId);//加载对应GGid
+//        mTMNaAdView.loadAd(461);
+//        mTMNaAdView1.loadAd(460);
+        mTMNaAdView.loadAd(306438,userId);
+        mTMNaAdView1.loadAd(306438,userId);
     }
 
     @Override
     protected void onDestroy() {
-        if (mTMBrAdView != null) {
-            mTMBrAdView.destroy();
+        if (mTMNaAdView != null) {
+            mTMNaAdView.destroy();
+        }
+        if (mTMNaAdView1 != null) {
+            mTMNaAdView1.destroy();
         }
         super.onDestroy();
     }
-
 }

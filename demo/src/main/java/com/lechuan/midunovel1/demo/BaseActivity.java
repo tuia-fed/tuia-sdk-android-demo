@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

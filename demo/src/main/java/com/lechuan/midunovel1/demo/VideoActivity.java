@@ -1,14 +1,11 @@
-package com.lechuan.midunovel.demo;
+package com.lechuan.midunovel1.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.blankj.utilcode.util.ToastUtils;
-import com.lechuan.midunovel.view.tools.FoxLogger;
 import com.lechuan.midunovel.view.video.FoxVideoListener;
 import com.lechuan.midunovel.view.video.FoxVideoView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 public class VideoActivity extends AppCompatActivity {
 
@@ -23,40 +20,31 @@ public class VideoActivity extends AppCompatActivity {
                         "91200183954567", "", "312152", "", new FoxVideoListener() {
                     @Override
                     public void onFoxRequestRewardVideo() {
-                        FoxLogger.jLog().d("onFoxRequestRewardVideo");
                     }
 
                     @Override
                     public void onFoxAdSuccessed() {
-                        FoxLogger.jLog().d("onFoxAdSuccessed");
                     }
 
                     @Override
                     public void onFoxAdEmpty() {
-                        FoxLogger.jLog().d("onFoxAdEmpty");
                     }
 
                     @Override
                     public void onFoxAdFailed(String response) {
-                        FoxLogger.jLog().d("onFoxAdFailed");
                     }
 
                     @Override
                     public void onFoxAdClick() {
-                        FoxLogger.jLog().d("onFoxAdClick");
                     }
 
                     @Override
                     public void onFoxAdShow() {
-                        FoxLogger.jLog().d("onFoxAdShow");
                     }
 
                     @Override
                     public void onFoxAdClose(String s) {
-                        FoxLogger.jLog().d("onFoxAdClose"+s);
-                        if (!CommonUtils.isEmpty(s)){
-                            ToastUtils.showShort(s);
-                        }
+
                     }
 
                 });
