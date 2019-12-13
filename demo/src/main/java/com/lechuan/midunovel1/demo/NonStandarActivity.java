@@ -5,14 +5,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
+import com.lechuan.midunovel.base.util.FoxBaseGsonUtil;
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxActivity;
 import com.lechuan.midunovel.view.FoxCustomerTm;
 import com.lechuan.midunovel.view.FoxNsTmListener;
 import com.lechuan.midunovel.view.video.Constants;
 import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
-import com.lechuan.midunovel.view.video.util.GsonUtil;
 
 
 /**
@@ -41,14 +42,14 @@ public class NonStandarActivity extends BaseActivity {
 
         mOxCustomerTm = new FoxCustomerTm(this);
 
-        mOxCustomerTm.loadAd(304507,userId);
+        mOxCustomerTm.loadAd(301970,userId);
 
         mOxCustomerTm.setAdListener(new FoxNsTmListener() {
             @Override
             public void onReceiveAd(String result) {
                 Log.d("========", "onReceiveAd:"+result);
-                if (!CommonUtils.isEmpty(result)){
-                    FoxResponseBean.DataBean dataBean = GsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
+                if (!FoxBaseCommonUtils.isEmpty(result)){
+                    FoxResponseBean.DataBean dataBean = FoxBaseGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
                     if (dataBean!=null){
                         mDataBean = dataBean;
                     }
@@ -63,16 +64,24 @@ public class NonStandarActivity extends BaseActivity {
                 Log.d("========", "onFailedToReceiveAd");
             }
 
+            @Override
+            public void onAdActivityClose(String s) {
+                Log.d("========", "onAdActivityClose"+s);
+                if (!FoxBaseCommonUtils.isEmpty(s)){
+                    ToastUtils.showShort(s);
+                }
+            }
+
         });
 
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mDataBean!=null && !CommonUtils.isEmpty(mDataBean.getActivityUrl())){
+                if (mDataBean!=null && !FoxBaseCommonUtils.isEmpty(mDataBean.getActivityUrl())){
                     //素材点击时候调用素材点击曝光方法
                     mOxCustomerTm.adClicked();
-                    FoxActivity.starActivity(NonStandarActivity.this,mDataBean.getActivityUrl(),Constants.BUNDLE_KEY_FROM_FOXCUSTOMERTM);
+                    mOxCustomerTm.openFoxActivity(mDataBean.getActivityUrl());
                 }
             }
         });

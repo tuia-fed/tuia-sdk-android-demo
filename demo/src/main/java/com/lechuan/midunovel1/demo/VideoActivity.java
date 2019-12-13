@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.video.FoxVideoListener;
 import com.lechuan.midunovel.view.video.FoxVideoView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 public class VideoActivity extends AppCompatActivity {
 
@@ -47,7 +47,7 @@ public class VideoActivity extends AppCompatActivity {
 
                     @Override
                     public void onFoxAdClose(String s) {
-                        if (!CommonUtils.isEmpty(s)){
+                        if (!FoxBaseCommonUtils.isEmpty(s)){
                             ToastUtils.showShort(s);
                         }
                     }

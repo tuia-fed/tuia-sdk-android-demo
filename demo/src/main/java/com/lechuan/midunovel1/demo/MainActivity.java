@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.TMBrButton).setOnClickListener(this);
         findViewById(R.id.floatButton).setOnClickListener(this);
         findViewById(R.id.nsButton).setOnClickListener(this);
+        findViewById(R.id.nsVideoButton).setOnClickListener(this);
         userId = getIntent().getStringExtra("userId");
 
     }
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.nsButton:
                 //自定义
                 intent = new Intent(this, NonStandarActivity.class);
+                break;
+            case R.id.nsVideoButton:
+                //积分墙
+                intent = new Intent(this, VideoActivity.class);
                 break;
             default:
                 return;

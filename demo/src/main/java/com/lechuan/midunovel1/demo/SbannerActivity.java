@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxListener;
 import com.lechuan.midunovel.view.FoxStreamerView;
-import com.lechuan.midunovel.view.video.util.CommonUtils;
 
 /**
  * 横幅
@@ -57,7 +57,7 @@ public class SbannerActivity extends BaseActivity {
             @Override
             public void onAdActivityClose(String s) {
                 Log.d("========", "onAdActivityClose"+s);
-                if (!CommonUtils.isEmpty(s)){
+                if (!FoxBaseCommonUtils.isEmpty(s)){
                     ToastUtils.showShort(s);
                 }
             }
