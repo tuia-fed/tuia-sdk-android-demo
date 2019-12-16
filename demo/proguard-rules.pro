@@ -16,8 +16,8 @@
 #   public *;
 #}
 -ignorewarnings
--dontwarn com.lechuan.midunovel.view.**
--keep class com.lechuan.midunovel.view.** { *; }
+-dontwarn com.lechuan.midunovel.**
+-keep class com.lechuan.midunovel.** { *; }
 #TONGDUN
 -dontwarn android.os.**
 -dontwarn com.android.internal.**
@@ -31,7 +31,6 @@
   **[] $VALUES;
   public *;
 }
-
 
 
 -keep public class * extends android.view.View{
