@@ -60,7 +60,7 @@ public class BannerActivity extends BaseActivity {
             }
         });
 
-        mTMBrAdView.loadAd(301970,userId);
+        mTMBrAdView.loadAd(323778,userId);
     }
 
     @Override

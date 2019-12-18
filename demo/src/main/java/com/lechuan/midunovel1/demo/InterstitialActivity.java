@@ -61,7 +61,7 @@ public class InterstitialActivity extends BaseActivity {
             }
         });
 //        mTMItAd.loadAd(459);
-        mTMItAd.loadAd(301968,userId);
+        mTMItAd.loadAd(323776,userId);
     }
     @Override
     protected void onDestroy() {

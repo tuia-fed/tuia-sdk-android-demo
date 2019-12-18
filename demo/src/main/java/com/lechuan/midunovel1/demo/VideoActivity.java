@@ -19,8 +19,14 @@ public class VideoActivity extends AppCompatActivity {
         findViewById(R.id.btnVideo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 *  .mUserId = s;
+                 *  .mAppId = s1;
+                 *  .mSlotId = s2;
+                 *  .mDeviceId = s3;
+                 */
                 FoxVideoView magicVideoView =new FoxVideoView(getApplication(),
-                        "91200183954567", "", "312152", "", new FoxVideoListener() {
+                        "91200183954567", "", "323780", "", new FoxVideoListener() {
                     @Override
                     public void onFoxRequestRewardVideo() {
                     }

@@ -84,7 +84,7 @@ public class SplashActivity extends Activity {
             }
 
         });
-        mOXShView.loadAd(301978);
+        mOXShView.loadAd(323775);
     }
 
 

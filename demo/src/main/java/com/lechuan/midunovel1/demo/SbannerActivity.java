@@ -62,7 +62,7 @@ public class SbannerActivity extends BaseActivity {
                 }
             }
         });
-        mTMBrAdView.loadAd(301967,userId);//加载对应GGid
+        mTMBrAdView.loadAd(323777,userId);//加载对应GGid
     }
 
     @Override

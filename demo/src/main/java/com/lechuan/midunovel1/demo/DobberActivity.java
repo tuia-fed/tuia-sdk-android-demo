@@ -70,7 +70,7 @@ public class DobberActivity extends BaseActivity {
             }
 
         });
-        mOxWallView.loadAd(301971,userId);
+        mOxWallView.loadAd(323779,userId);
     }
 
     @Override

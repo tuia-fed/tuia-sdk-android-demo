@@ -3,8 +3,8 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
-        maven { url "https://jitpack.io" }
         maven { url "https://dl.bintray.com/sunjiangrong/maven" }
+        maven { url "https://jitpack.io" }
         maven {
             url 'https://maven.google.com/'
             name 'Google'
@@ -26,8 +26,8 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
-        maven { url "https://jitpack.io" }
         maven { url "https://dl.bintray.com/sunjiangrong/maven" }
+        maven { url "https://jitpack.io" }
         maven {
             url 'https://maven.google.com/'
             name 'Google'

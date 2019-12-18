@@ -18,10 +18,10 @@
         <!-- 推啊appkey -->
         <meta-data
             android:name="TUIA_APPKEY"
-            android:value="kEzAJT4iRMMag29Z7yWcJGfcVgG" />
+            android:value="4UycwwZv41rwzne1ZXgtQBgDSnPH" />
         <meta-data
             android:name="TUIA_APPSECRET"
-            android:value="3Wq4afvvdPhyHBR29LgRwEC16gkrrFXZ5BRoL2E" />
+            android:value="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g" />
 
         <activity
             android:name="com.lechuan.midunovel1.demo.SplashActivity"

@@ -42,7 +42,7 @@ public class NonStandarActivity extends BaseActivity {
 
         mOxCustomerTm = new FoxCustomerTm(this);
 
-        mOxCustomerTm.loadAd(301970,userId);
+        mOxCustomerTm.loadAd(323780,userId);
 
         mOxCustomerTm.setAdListener(new FoxNsTmListener() {
             @Override
