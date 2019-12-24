@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.nsButton).setOnClickListener(this);
         findViewById(R.id.nsVideoButton).setOnClickListener(this);
         userId = getIntent().getStringExtra("userId");
-
     }
 
     @Override

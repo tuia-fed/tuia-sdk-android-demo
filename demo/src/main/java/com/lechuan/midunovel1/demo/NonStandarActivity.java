@@ -42,8 +42,6 @@ public class NonStandarActivity extends BaseActivity {
 
         mOxCustomerTm = new FoxCustomerTm(this);
 
-        mOxCustomerTm.loadAd(323780,userId);
-
         mOxCustomerTm.setAdListener(new FoxNsTmListener() {
             @Override
             public void onReceiveAd(String result) {
@@ -56,6 +54,7 @@ public class NonStandarActivity extends BaseActivity {
                     //素材加载成功时候调用素材加载曝光方法
                     mOxCustomerTm.adExposed();
                 }
+                //展示使用
                 textView.setText(result);
             }
 
@@ -73,6 +72,7 @@ public class NonStandarActivity extends BaseActivity {
             }
 
         });
+        mOxCustomerTm.loadAd(323780,userId);
 
 
         textView.setOnClickListener(new View.OnClickListener() {
