@@ -19,6 +19,7 @@
         <meta-data
             android:name="TUIA_APPKEY"
             android:value="4UycwwZv41rwzne1ZXgtQBgDSnPH" />
+
         <meta-data
             android:name="TUIA_APPSECRET"
             android:value="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g" />
@@ -36,12 +37,14 @@
         <activity android:name="com.lechuan.midunovel1.demo.SbannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.BannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.InterstitialActivity" />
-        <activity android:name="com.lechuan.midunovel1.demo.NativeAdActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.AppWallActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.DobberActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.MainActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.NonStandarActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.VideoActivity" />
+        <activity
+            android:name="com.lechuan.midunovel1.demo.NativeInterstitialActivity"
+            android:configChanges="screenSize|orientation" />
     </application>
 
 </manifest>

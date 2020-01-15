@@ -18,12 +18,6 @@
 -ignorewarnings
 -dontwarn com.lechuan.midunovel.**
 -keep class com.lechuan.midunovel.** { *; }
-#TONGDUN
--dontwarn android.os.**
--dontwarn com.android.internal.**
--dontwarn cn.tongdun.android.**
--keep class cn.tongdun.android.**{*;}
-
 
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.module.AppGlideModule

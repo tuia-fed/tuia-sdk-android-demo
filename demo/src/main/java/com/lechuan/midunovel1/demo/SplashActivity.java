@@ -16,6 +16,13 @@ import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.FoxShListener;
 import com.lechuan.midunovel.view.FoxShView;
 
+/**
+ * 开屏广告参考自定义广告实现方式：NonStandarActivity
+ *
+ * 1.参考自定义广告请求，素材曝光，活动点击加载
+ * 2.媒体自己处理素材展示加载逻辑
+ *
+ */
 public class SplashActivity extends Activity {
 
     protected FoxShView mOXShView;

@@ -50,12 +50,21 @@
         android:text="自定义"/>
 
    <Button
+       android:visibility="gone"
         android:id="@+id/nsVideoButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="激励视频"/>
+
+  <Button
+      android:id="@+id/nsCPButton"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:text="原生插屏1081"/>
 
 
 </LinearLayout>

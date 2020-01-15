@@ -9,10 +9,8 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.base.util.FoxBaseGsonUtil;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.FoxActivity;
 import com.lechuan.midunovel.view.FoxCustomerTm;
 import com.lechuan.midunovel.view.FoxNsTmListener;
-import com.lechuan.midunovel.view.video.Constants;
 import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
 
 
@@ -26,7 +24,7 @@ import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
  * 2.SDK内部处理：
  *     素材展示媒体自己加载并在加载成功时调用素材曝光mOxCustomerTm.adExposed()，
  *     素材点击请调用mOxCustomerTm.adClicked()，同时传入返回的活动链接url调用
- *     FoxActivity.starActivity(mContext,url,Constants.BUNDLE_KEY_FROM_FOXCUSTOMERTM)
+ *     mOxCustomerTm.openFoxActivity(mDataBean.getActivityUrl());
  */
 public class NonStandarActivity extends BaseActivity {
     private FoxCustomerTm mOxCustomerTm;
@@ -78,7 +76,7 @@ public class NonStandarActivity extends BaseActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mDataBean!=null && !FoxBaseCommonUtils.isEmpty(mDataBean.getActivityUrl())){
+                if (mOxCustomerTm!=null && mDataBean!=null && !FoxBaseCommonUtils.isEmpty(mDataBean.getActivityUrl())){
                     //素材点击时候调用素材点击曝光方法
                     mOxCustomerTm.adClicked();
                     mOxCustomerTm.openFoxActivity(mDataBean.getActivityUrl());
