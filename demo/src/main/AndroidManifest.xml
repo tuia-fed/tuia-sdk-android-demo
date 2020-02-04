@@ -28,18 +28,19 @@
             android:name="com.lechuan.midunovel1.demo.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.lechuan.midunovel1.demo.SbannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.BannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.InterstitialActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.AppWallActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.DobberActivity" />
-        <activity android:name="com.lechuan.midunovel1.demo.MainActivity" />
+        <activity android:name="com.lechuan.midunovel1.demo.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.lechuan.midunovel1.demo.NonStandarActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.VideoActivity" />
         <activity
