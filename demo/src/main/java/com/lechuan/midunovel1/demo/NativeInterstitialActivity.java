@@ -75,7 +75,7 @@ public class NativeInterstitialActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        boolean isConsume = true;
+        boolean isConsume = false;
         if (ad != null) {
             isConsume = ad.onKeyBack(keyCode, event);
         }
