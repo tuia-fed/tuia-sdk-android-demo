@@ -24,11 +24,6 @@
             android:name="TUIA_APPSECRET"
             android:value="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g" />
 
-        <activity
-            android:name="com.lechuan.midunovel1.demo.SplashActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        </activity>
         <activity android:name="com.lechuan.midunovel1.demo.SbannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.BannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.InterstitialActivity" />
@@ -42,7 +37,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.lechuan.midunovel1.demo.NonStandarActivity" />
-        <activity android:name="com.lechuan.midunovel1.demo.VideoActivity" />
         <activity
             android:name="com.lechuan.midunovel1.demo.NativeInterstitialActivity"
             android:configChanges="screenSize|orientation" />

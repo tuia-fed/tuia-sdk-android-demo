@@ -66,7 +66,9 @@ public class NativeInterstitialActivity extends AppCompatActivity {
         findViewById(R.id.btn_req).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ad.loadAd(NativeInterstitialActivity.this, false);
+                if (ad!=null){
+                    ad.loadAd(NativeInterstitialActivity.this, false);
+                }
             }
         });
     }
