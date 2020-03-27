@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.nativead.Ad;
@@ -62,7 +63,12 @@ public class NativeInterstitialActivity extends AppCompatActivity {
                 Log.d("========", "onPrizeShow");
             }
         });
-        ad.loadAd(NativeInterstitialActivity.this, false);
+        findViewById(R.id.btn_req).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ad.loadAd(NativeInterstitialActivity.this, false);
+            }
+        });
     }
 
     @Override

@@ -1,9 +1,5 @@
 apply plugin: 'com.android.application'
 
-def releaseTime() {
-    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("UTC"))
-}
-
 android {
 
     lintOptions {
@@ -24,7 +20,6 @@ android {
     buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.lechuan.midunovel.demo"
-//        applicationId "com.lechuan.midunovel.test"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
@@ -47,47 +42,16 @@ android {
             minifyEnabled false
             zipAlignEnabled false
             debuggable true
-//            minifyEnabled false
-//            zipAlignEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.tuia
-//            applicationVariants.all {
-//                variant ->    variant.outputs.each { output ->
-//                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                        if (project.hasProperty('OUT_PUT_DIR_PARA')) {
-//                            File output_dir1 = file("${OUT_PUT_DIR_PARA}");
-//                            output.outputFile = new File(output_dir1,"XXX${releaseTime()}.apk")
-//                        } else {
-//                            output.outputFile = new File(outputFile.parent, "XXX${releaseTime()}.apk")
-//                        }
-
-//                    }
-//                }
-//            }
         }
 
         release {
             minifyEnabled true
             zipAlignEnabled true
             debuggable true
-//            minifyEnabled false
-//            zipAlignEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.tuia
-//            applicationVariants.all {
-//                variant ->    variant.outputs.each { output ->
-//                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                        if (project.hasProperty('OUT_PUT_DIR_PARA')) {
-//                            File output_dir1 = file("${OUT_PUT_DIR_PARA}");
-//                            output.outputFile = new File(output_dir1,"XXX${releaseTime()}.apk")
-//                        } else {
-//                            output.outputFile = new File(outputFile.parent, "XXX${releaseTime()}.apk")
-//                        }
-//                    }
-//                }
-//            }
         }
     }
 
@@ -108,7 +72,7 @@ allprojects {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     implementation files('libs/miit_mdid_1.0.10.aar')
-    implementation('com.tuia:sdk:1.6.0.2') {
+    implementation('com.tuia:sdk:1.8.0.8') {
         transitive = true
     }
 
