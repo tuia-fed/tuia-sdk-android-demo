@@ -3,7 +3,6 @@ package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.util.Log;
-
 import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
@@ -16,13 +15,18 @@ import com.lechuan.midunovel.view.FoxStreamerView;
 public class SbannerActivity extends BaseActivity {
 
     private FoxStreamerView mTMBrAdView;
+    private String userId;
+    private int slotId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sbanner);
         mTMBrAdView = (FoxStreamerView) findViewById(R.id.TMBrView);
-        String userId = getIntent().getStringExtra("userId");
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
         mTMBrAdView.setAdListener(new FoxListener() {
             @Override
             public void onReceiveAd() {
@@ -62,7 +66,7 @@ public class SbannerActivity extends BaseActivity {
                 }
             }
         });
-        mTMBrAdView.loadAd(323777,userId);//加载对应GGid
+        mTMBrAdView.loadAd(slotId,userId);//加载对应GGid
     }
 
     @Override

@@ -31,15 +31,20 @@ public class NonStandarActivity extends BaseActivity {
 
     private TextView textView;
     private FoxResponseBean.DataBean mDataBean;
+    private String userId;
+    private int slotId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_non_standar);
         textView = (TextView)findViewById(R.id.content_text);
-        String userId = getIntent().getStringExtra("userId");
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
 
         mOxCustomerTm = new FoxCustomerTm(this);
-
         mOxCustomerTm.setAdListener(new FoxNsTmListener() {
             @Override
             public void onReceiveAd(String result) {
@@ -70,7 +75,7 @@ public class NonStandarActivity extends BaseActivity {
             }
 
         });
-        mOxCustomerTm.loadAd(323780,userId);
+        mOxCustomerTm.loadAd(slotId,userId);
 
 
         textView.setOnClickListener(new View.OnClickListener() {

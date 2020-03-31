@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/default_image_background">
+    android:id="@+id/container">
 
-    <com.lechuan.midunovel.view.FoxShView
-        android:id="@+id/TMSh_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:countTime="2" />
-        />
+    <Button
+        android:id="@+id/btn_req"
+        android:text="点击请求广告"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+
+</FrameLayout>

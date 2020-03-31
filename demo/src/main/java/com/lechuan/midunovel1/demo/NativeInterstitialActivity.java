@@ -11,16 +11,22 @@ import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.nativead.Ad;
 import com.lechuan.midunovel.nativead.AdCallBack;
 
-public class NativeInterstitialActivity extends AppCompatActivity {
+public class NativeInterstitialActivity extends BaseActivity {
 
     private Ad ad;
+    private String userId;
+    private int slotId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_native_interstitial);
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
         //s1：slotId  s2:userId  s3:deviceId
-        ad = new Ad("4UycwwZv41rwzne1ZXgtQBgDSnPH","325021", "", "");
+        ad = new Ad("4UycwwZv41rwzne1ZXgtQBgDSnPH", slotId+"", userId, "");
         ad.init(NativeInterstitialActivity.this, null, Ad.AD_URL_NEW, new AdCallBack() {
 
             @Override
@@ -66,7 +72,8 @@ public class NativeInterstitialActivity extends AppCompatActivity {
         findViewById(R.id.btn_req).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ad!=null){
+                if (ad != null) {
+//                    ad.resetSlotId(slotId+"");
                     ad.loadAd(NativeInterstitialActivity.this, false);
                 }
             }

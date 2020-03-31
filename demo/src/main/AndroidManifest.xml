@@ -7,7 +7,7 @@
 
     <application
         android:name="com.lechuan.midunovel1.demo.SdkApplication"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_logo"
         android:label="tuia-online"
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
@@ -29,7 +29,10 @@
         <activity android:name="com.lechuan.midunovel1.demo.InterstitialActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.AppWallActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.DobberActivity" />
-        <activity android:name="com.lechuan.midunovel1.demo.MainActivity" >
+        <activity android:name="com.lechuan.midunovel1.demo.SplashActivity" />
+        <activity android:name="com.lechuan.midunovel1.demo.NativeAdActivity" />
+        <activity android:name="com.lechuan.midunovel1.demo.MainActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,6 +42,9 @@
         <activity android:name="com.lechuan.midunovel1.demo.NonStandarActivity" />
         <activity
             android:name="com.lechuan.midunovel1.demo.NativeInterstitialActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.lechuan.midunovel1.demo.NativeInterstitial2Activity"
             android:configChanges="screenSize|orientation" />
     </application>
 

@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
-  <Button
+    <Button
+        android:id="@+id/sTMSplashButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="开屏广告" />
+
+    <Button
         android:id="@+id/sTMBrButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="横幅"/>
+        android:text="横幅广告" />
 
+    <Button
+        android:id="@+id/sTMInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="信息流广告" />
 
     <Button
         android:id="@+id/TMItButton258092"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="插屏"/>
+        android:text="插屏广告" />
 
     <Button
         android:id="@+id/TMBrButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Banner"/>
+        android:text="Banner广告" />
 
     <Button
         android:id="@+id/floatButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="浮标"/>
+        android:text="浮标广告" />
 
     <Button
         android:id="@+id/nsButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="自定义"/>
+        android:text="自定义广告" />
 
-   <Button
-       android:visibility="gone"
-        android:id="@+id/nsVideoButton"
+    <Button
+        android:id="@+id/nsCPButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="激励视频"/>
+        android:text="原生插屏1081广告" />
 
-  <Button
-      android:id="@+id/nsCPButton"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:layout_marginTop="8dp"
-      android:gravity="center"
-      android:text="原生插屏1081"/>
-
+    <Button
+        android:id="@+id/nsCP2Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="原生插屏1081广告-使用素材" />
 
 </LinearLayout>
 

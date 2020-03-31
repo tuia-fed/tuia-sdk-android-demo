@@ -13,12 +13,17 @@ import com.lechuan.midunovel.view.FoxStreamerView;
 public class BannerActivity extends BaseActivity {
 
     private FoxStreamerView mTMBrAdView;
+    private String userId;
+    private int slotId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner);
-        String userId = getIntent().getStringExtra("userId");
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
         mTMBrAdView = (FoxStreamerView) findViewById(R.id.TMBrView);
         mTMBrAdView.setAdListener(new FoxListener() {
             @Override
@@ -60,7 +65,7 @@ public class BannerActivity extends BaseActivity {
             }
         });
 
-        mTMBrAdView.loadAd(323778,userId);
+        mTMBrAdView.loadAd(slotId,userId);
     }
 
     @Override

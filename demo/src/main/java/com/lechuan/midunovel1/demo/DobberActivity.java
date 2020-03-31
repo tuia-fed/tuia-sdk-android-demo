@@ -21,14 +21,19 @@ public class DobberActivity extends BaseActivity {
 
     private ListView mListView;
     private FoxWallView mOxWallView;
+    private String userId;
+    private int slotId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dobber);
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
         mListView = (ListView) findViewById(R.id.list);
         mOxWallView = (FoxWallView) findViewById(R.id.TMAw1);
-        String userId = getIntent().getStringExtra("userId");
         mListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, getData()));
         mOxWallView.setAdListener(new FoxListener() {
             @Override
@@ -70,7 +75,7 @@ public class DobberActivity extends BaseActivity {
             }
 
         });
-        mOxWallView.loadAd(323779,userId);
+        mOxWallView.loadAd(slotId,userId);
     }
 
     @Override

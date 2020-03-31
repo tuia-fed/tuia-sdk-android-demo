@@ -13,13 +13,19 @@ import com.lechuan.midunovel.view.FoxTbScreen;
  * 基础插屏
  */
 public class InterstitialActivity extends BaseActivity {
+
     private FoxTbScreen mTMItAd;
+    private String userId;
+    private int slotId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interstitial);
-        String userId = getIntent().getStringExtra("userId");
+        if (getIntent()!=null){
+            userId = getIntent().getStringExtra("userId");
+            slotId = getIntent().getIntExtra("slotId", 0);
+        }
         mTMItAd = new FoxTbScreen(this);
         mTMItAd.setAdListener(new FoxListener() {
             @Override
@@ -60,8 +66,7 @@ public class InterstitialActivity extends BaseActivity {
                 }
             }
         });
-//        mTMItAd.loadAd(459);
-        mTMItAd.loadAd(323776,userId);
+        mTMItAd.loadAd(slotId,userId);
     }
     @Override
     protected void onDestroy() {
