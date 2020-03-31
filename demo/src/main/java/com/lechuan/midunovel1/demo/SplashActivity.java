@@ -117,7 +117,7 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onAdActivityClose(String data) {
-
+        jumpMain();
     }
 }
 

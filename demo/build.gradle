@@ -72,7 +72,7 @@ allprojects {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     implementation files('libs/miit_mdid_1.0.10.aar')
-    implementation('com.tuia:sdk:2.0.0.9') {
+    implementation('com.tuia:sdk:2.0.1.0') {
         transitive = true
     }
 
