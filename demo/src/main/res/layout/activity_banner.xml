@@ -12,5 +12,14 @@
         android:layout_height="wrap_content"
         tools:fox_size="foxBr" />
 
+    <com.lechuan.midunovel.view.FoxStreamerView
+        android:id="@+id/TMBrView1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:fox_width="700"
+        tools:fox_height="200"/>
+
+
 
 </RelativeLayout>
