@@ -75,7 +75,9 @@ public class NonStandarActivity extends BaseActivity {
             }
 
         });
-        mOxCustomerTm.loadAd(slotId,userId);
+        //第三个参数  //isimageUrl  1 使用素材(默认为1)   0不使用素材
+        // mOxCustomerTm.loadAd(slotId, userId,isimageUrl);
+        mOxCustomerTm.loadAd(slotId,userId,1);
 
 
         textView.setOnClickListener(new View.OnClickListener() {
