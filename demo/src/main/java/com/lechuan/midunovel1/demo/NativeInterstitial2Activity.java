@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.nativead.Ad;
-import com.lechuan.midunovel.nativead.DefaultAdCallBack;
-import com.lechuan.midunovel.nativead.bean.AdResponseBean;
+import com.ta.android.base.util.FoxBaseCommonUtils;
+import com.ta.android.nativead.Ad;
+import com.ta.android.nativead.DefaultAdCallBack;
+import com.ta.android.nativead.bean.AdResponseBean;
 
 public class NativeInterstitial2Activity extends BaseActivity {
 

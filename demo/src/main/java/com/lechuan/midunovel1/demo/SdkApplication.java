@@ -5,7 +5,7 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import com.facebook.stetho.Stetho;
-import com.lechuan.midunovel.view.FoxSDK;
+import com.ta.android.view.FoxSDK;
 
 public class SdkApplication extends Application {
 

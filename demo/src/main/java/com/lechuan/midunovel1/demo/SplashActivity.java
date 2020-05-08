@@ -1,6 +1,5 @@
 package com.lechuan.midunovel1.demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +7,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxNativeSplashHolder;
-import com.lechuan.midunovel.view.holder.FoxSplashAd;
+import com.ta.android.view.holder.FoxNativeAdHelper;
+import com.ta.android.view.holder.FoxNativeSplashHolder;
+import com.ta.android.view.holder.FoxSplashAd;
 
 /**
  * 开屏广告

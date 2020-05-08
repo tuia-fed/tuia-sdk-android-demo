@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
-import com.lechuan.midunovel.base.util.FoxBaseGsonUtil;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.FoxCustomerTm;
-import com.lechuan.midunovel.view.FoxNsTmListener;
-import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
+import com.ta.android.base.util.FoxBaseCommonUtils;
+import com.ta.android.base.util.FoxBaseGsonUtil;
+import com.ta.android.view.FoxCustomerTm;
+import com.ta.android.view.FoxNsTmListener;
+import com.ta.android.view.video.bean.FoxResponseBean;
 
 
 /**
@@ -78,7 +78,6 @@ public class NonStandarActivity extends BaseActivity {
         //第三个参数  //isimageUrl  1 使用素材(默认为1)   0不使用素材
         // mOxCustomerTm.loadAd(slotId, userId,isimageUrl);
         mOxCustomerTm.loadAd(slotId,userId,1);
-
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

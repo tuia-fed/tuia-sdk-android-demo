@@ -1,15 +1,14 @@
 package com.lechuan.midunovel1.demo;
 
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.nativead.Ad;
-import com.lechuan.midunovel.nativead.AdCallBack;
+import com.ta.android.nativead.Ad;
+import com.ta.android.nativead.AdCallBack;
 
 public class NativeInterstitialActivity extends BaseActivity {
 

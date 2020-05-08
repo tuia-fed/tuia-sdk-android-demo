@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.FoxListener;
-import com.lechuan.midunovel.view.FoxWallView;
+import com.ta.android.base.util.FoxBaseCommonUtils;
+import com.ta.android.view.FoxListener;
+import com.ta.android.view.FoxWallView;
 
 
 public class AppWallActivity extends BaseActivity {

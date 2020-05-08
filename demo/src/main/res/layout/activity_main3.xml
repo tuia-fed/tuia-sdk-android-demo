@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <!--<com.lechuan.midunovel.view.FoxInfoStreamView-->
+        <!--<com.ta.android.view.FoxInfoStreamView-->
         <!--android:id="@+id/TMNaView"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->

@@ -2,15 +2,12 @@ package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.holder.FoxInfoAd;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxNativeInfoHolder;
+import com.ta.android.view.holder.FoxInfoAd;
+import com.ta.android.view.holder.FoxNativeAdHelper;
+import com.ta.android.view.holder.FoxNativeInfoHolder;
 
 /**
  * 信息流广告
@@ -32,7 +29,7 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
             slotId = getIntent().getIntExtra("slotId", 0);
         }
         nativeInfoHolder = FoxNativeAdHelper.getNativeInfoHolder();
-        nativeInfoHolder.loadInfoAd(slotId,userId,this);
+        nativeInfoHolder.loadInfoAd(NativeAdActivity.this,slotId,userId,this);
     }
 
     @Override

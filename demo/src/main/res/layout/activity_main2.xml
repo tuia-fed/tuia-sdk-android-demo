@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lechuan.midunovel.demo.Main2Activity">
+    tools:context="com.ta.android.demo.Main2Activity">
     <EditText
         android:id="@+id/edit_query"
         android:layout_width="match_parent"

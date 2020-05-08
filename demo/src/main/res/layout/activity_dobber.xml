@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
-    <com.lechuan.midunovel.view.FoxWallView
+    <com.ta.android.view.FoxWallView
         android:id="@+id/TMAw1"
         android:layout_width="60dp"
         android:layout_height="60dp"
