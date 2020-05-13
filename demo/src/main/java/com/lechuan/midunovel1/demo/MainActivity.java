@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent;
         switch (v.getId()) {
             case R.id.sTMSplashButton:
-                //横幅
+                //开屏
                 intent = new Intent(this, SplashActivity.class);
                 intent.putExtra("slotId", 330487);
                 break;
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("slotId", 323777);
                 break;
             case R.id.sTMInfoButton:
-                //横幅
-                intent = new Intent(this, NativeAdActivity.class);
+                //信息流
+                intent = new Intent(this, TempletFeedListActivity.class);
                 intent.putExtra("slotId", 331035);
                 break;
             case R.id.TMItButton258092:

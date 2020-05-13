@@ -1,6 +1,5 @@
 package com.lechuan.midunovel1.demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

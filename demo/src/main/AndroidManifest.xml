@@ -46,6 +46,9 @@
         <activity
             android:name="com.lechuan.midunovel1.demo.NativeInterstitial2Activity"
             android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="com.lechuan.midunovel1.demo.TempletFeedListActivity"
+            android:configChanges="screenSize|orientation" />
     </application>
 
 </manifest>
