@@ -1,12 +1,10 @@
 package com.lechuan.midunovel1.demo;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel.view.holder.FoxInfoAd;
 import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
@@ -32,7 +30,7 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
             slotId = getIntent().getIntExtra("slotId", 0);
         }
         nativeInfoHolder = FoxNativeAdHelper.getNativeInfoHolder();
-        nativeInfoHolder.loadInfoAd(slotId,userId,this);
+        nativeInfoHolder.loadInfoAd(NativeAdActivity.this,slotId,userId,this);
     }
 
     @Override
@@ -62,12 +60,12 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
 
     @Override
     public void onReceiveAd() {
-
+        Log.d("onReceiveAd","");
     }
 
     @Override
     public void onFailedToReceiveAd() {
-
+        Log.d("onReceiveAd","");
     }
 
     @Override
