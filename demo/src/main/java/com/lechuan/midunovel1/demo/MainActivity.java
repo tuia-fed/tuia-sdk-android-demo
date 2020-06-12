@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.nsButton).setOnClickListener(this);
         findViewById(R.id.nsCPButton).setOnClickListener(this);
         findViewById(R.id.nsCP2Button).setOnClickListener(this);
+        findViewById(R.id.textLinkButton).setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +60,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //浮标
                 intent = new Intent(this, DobberActivity.class);
                 intent.putExtra("slotId", 323779);
+                break;
+            case R.id.textLinkButton:
+                //文字链
+                intent = new Intent(this, TextLinkAdActivity.class);
+                intent.putExtra("slotId", 347174);
                 break;
             case R.id.nsButton:
                 //自定义

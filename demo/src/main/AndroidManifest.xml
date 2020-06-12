@@ -29,6 +29,7 @@
         <activity android:name="com.lechuan.midunovel1.demo.InterstitialActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.AppWallActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.DobberActivity" />
+        <activity android:name="com.lechuan.midunovel1.demo.TextLinkAdActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.SplashActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.NativeAdActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.MainActivity"
