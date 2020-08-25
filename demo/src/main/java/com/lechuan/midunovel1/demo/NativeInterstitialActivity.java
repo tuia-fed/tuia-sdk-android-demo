@@ -1,17 +1,14 @@
 package com.lechuan.midunovel1.demo;
 
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.lechuan.midunovel.base.util.FoxBaseLogger;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.nativead.Ad;
-import com.lechuan.midunovel.nativead.AdCallBack;
-import com.lechuan.midunovel.nativead.DefaultAdCallBack;
+import com.mediamain.android.nativead.Ad;
+import com.mediamain.android.nativead.AdCallBack;
 
 public class NativeInterstitialActivity extends BaseActivity {
 
@@ -40,8 +37,8 @@ public class NativeInterstitialActivity extends BaseActivity {
                     }
 
                     @Override
-                    public void onFailedToReceiveAd() {
-                        Log.d("========", "onFailedToReceiveAd");
+                    public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+                        Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
                     }
 
                     @Override

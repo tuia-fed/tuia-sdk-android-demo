@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lechuan.midunovel.demo.DemoActivity">
-<com.lechuan.midunovel.view.LionWebImageView
+<com.mediamain.android.view.LionWebImageView
     android:id="@+id/gif"
     android:layout_width="150dp"
     android:layout_height="150dp" />

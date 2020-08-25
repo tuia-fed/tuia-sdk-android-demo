@@ -2,19 +2,16 @@ package com.lechuan.midunovel1.demo;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.nativead.Ad;
-import com.lechuan.midunovel.nativead.AdCallBack;
-import com.lechuan.midunovel.nativead.DefaultAdCallBack;
-import com.lechuan.midunovel.nativead.bean.AdResponseBean;
+import com.mediamain.android.base.util.FoxBaseCommonUtils;
+import com.mediamain.android.nativead.Ad;
+import com.mediamain.android.nativead.DefaultAdCallBack;
+import com.mediamain.android.nativead.bean.AdResponseBean;
 
 public class NativeInterstitial2Activity extends BaseActivity {
 

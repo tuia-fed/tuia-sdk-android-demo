@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.lechuan.midunovel.view.FoxStreamerView
+    <com.mediamain.android.view.FoxStreamerView
         android:id="@+id/TMBrView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

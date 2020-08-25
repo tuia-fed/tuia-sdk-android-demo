@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.holder.FoxInfoAd;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxNativeInfoHolder;
+import com.mediamain.android.view.holder.FoxInfoAd;
+import com.mediamain.android.view.holder.FoxNativeAdHelper;
+import com.mediamain.android.view.holder.FoxNativeInfoHolder;
 
 /**
  * 信息流广告
@@ -64,8 +64,8 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
     }
 
     @Override
-    public void onFailedToReceiveAd() {
-        Log.d("onReceiveAd","");
+    public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+        Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
     }
 
     @Override

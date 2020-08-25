@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxTextLintAd;
-import com.lechuan.midunovel.view.interfaces.FoxTextLinkHolder;
+import com.mediamain.android.view.holder.FoxNativeAdHelper;
+import com.mediamain.android.view.holder.FoxTextLintAd;
+import com.mediamain.android.view.interfaces.FoxTextLinkHolder;
 
 /**
  * 信息流广告
@@ -64,8 +64,8 @@ public class TextLinkAdActivity extends BaseActivity implements FoxTextLinkHolde
     }
 
     @Override
-    public void onFailedToReceiveAd() {
-        Log.d("onReceiveAd","");
+    public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+        Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
     }
 
     @Override

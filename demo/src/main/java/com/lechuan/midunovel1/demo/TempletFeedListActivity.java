@@ -3,8 +3,6 @@ package com.lechuan.midunovel1.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +14,13 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.feed.IFoxTempletInfoFeedAd;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxTempletInfoFeedHolder;
 import com.lechuan.midunovel1.demo.widget.ILoadMoreListener;
 import com.lechuan.midunovel1.demo.widget.LoadMoreListView;
+import com.mediamain.android.base.util.FoxBaseCommonUtils;
+import com.mediamain.android.view.feed.IFoxTempletInfoFeedAd;
+import com.mediamain.android.view.holder.FoxNativeAdHelper;
+import com.mediamain.android.view.holder.FoxTempletInfoFeedHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -158,8 +156,8 @@ public class TempletFeedListActivity extends Activity {
             }
 
             @Override
-            public void onFailedToReceiveAd() {
-                Log.e(TAG, "onFailedToReceiveAd()");
+            public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+                Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
             }
 
             @Override

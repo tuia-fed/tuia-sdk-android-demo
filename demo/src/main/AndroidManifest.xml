@@ -16,13 +16,13 @@
         tools:replace="android:label">
 
         <!-- 推啊appkey -->
-        <meta-data
-            android:name="TUIA_APPKEY"
-            android:value="4UycwwZv41rwzne1ZXgtQBgDSnPH" />
+<!--        <meta-data-->
+<!--            android:name="TUIA_APPKEY"-->
+<!--            android:value="4UycwwZv41rwzne1ZXgtQBgDSnPH" />-->
 
-        <meta-data
-            android:name="TUIA_APPSECRET"
-            android:value="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g" />
+<!--        <meta-data-->
+<!--            android:name="TUIA_APPSECRET"-->
+<!--            android:value="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g" />-->
 
         <activity android:name="com.lechuan.midunovel1.demo.SbannerActivity" />
         <activity android:name="com.lechuan.midunovel1.demo.BannerActivity" />
