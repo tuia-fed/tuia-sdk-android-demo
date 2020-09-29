@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_app_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入appKey"
+        android:text="4UycwwZv41rwzne1ZXgtQBgDSnPH"
+        android:textSize="16sp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edt_app_secret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g"
+        android:hint="请输入appSecret"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edt_slot_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入广告位id"
+        android:text="364648"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/edt_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="左边距"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/edt_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="上边距"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/edt_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="右边距"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/edt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="下边距"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btn_load_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="请求悬浮升级广告"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

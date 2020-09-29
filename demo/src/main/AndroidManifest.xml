@@ -50,6 +50,8 @@
         <activity
             android:name="com.lechuan.midunovel1.demo.TempletFeedListActivity"
             android:configChanges="screenSize|orientation" />
+        <activity android:name="com.lechuan.midunovel1.demo.FloatTestActivity" />
+        <activity android:name="com.lechuan.midunovel1.demo.FloatingWebActivity" />
     </application>
 
 </manifest>

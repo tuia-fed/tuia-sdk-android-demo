@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.nsCPButton).setOnClickListener(this);
         findViewById(R.id.nsCP2Button).setOnClickListener(this);
         findViewById(R.id.textLinkButton).setOnClickListener(this);
+        findViewById(R.id.btn_float_plus).setOnClickListener(this);
     }
 
     @Override
@@ -80,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //自定义
                 intent = new Intent(this, NativeInterstitial2Activity.class);
                 intent.putExtra("slotId", 331946);
+                break;
+            case R.id.btn_float_plus:
+                //自定义
+                intent = new Intent(this, FloatingWebActivity.class);
                 break;
             default:
                 return;

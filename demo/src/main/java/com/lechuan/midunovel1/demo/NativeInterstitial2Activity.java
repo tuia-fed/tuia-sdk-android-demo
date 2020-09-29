@@ -11,14 +11,14 @@ import com.lechuan.midunovel.demo.R;
 import com.mediamain.android.base.util.FoxBaseCommonUtils;
 import com.mediamain.android.nativead.Ad;
 import com.mediamain.android.nativead.DefaultAdCallBack;
-import com.mediamain.android.nativead.bean.AdResponseBean;
+import com.mediamain.android.view.video.bean.FoxResponseBean;
 
 public class NativeInterstitial2Activity extends BaseActivity {
 
 
     private Ad ad;
     private String userId;
-    private AdResponseBean.DataBean mData;
+    private FoxResponseBean.DataBean mData;
     private int slotId;
 
     @Override
@@ -34,7 +34,7 @@ public class NativeInterstitial2Activity extends BaseActivity {
         ad = new Ad("4UycwwZv41rwzne1ZXgtQBgDSnPH", slotId + "", userId, "");
         ad.init(NativeInterstitial2Activity.this, null, Ad.AD_URL_NEW, new DefaultAdCallBack() {
             @Override
-            public void onReceiveAd(AdResponseBean.DataBean dataBean) {
+            public void onReceiveAd(FoxResponseBean.DataBean dataBean) {
                 super.onReceiveAd(dataBean);
                 mData = dataBean;
                 if (dataBean != null && !FoxBaseCommonUtils.isEmpty(dataBean.getImageUrl())) {
