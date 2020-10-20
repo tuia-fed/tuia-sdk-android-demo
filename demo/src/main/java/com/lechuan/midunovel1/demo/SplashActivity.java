@@ -1,16 +1,16 @@
 package com.lechuan.midunovel1.demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.holder.FoxNativeAdHelper;
-import com.lechuan.midunovel.view.holder.FoxNativeSplashHolder;
-import com.lechuan.midunovel.view.holder.FoxSplashAd;
+import com.mediamain.android.view.holder.FoxNativeAdHelper;
+import com.mediamain.android.view.holder.FoxNativeSplashHolder;
+import com.mediamain.android.view.holder.FoxSplashAd;
 
 /**
  * 开屏广告
@@ -55,6 +55,8 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         if (foxNativeSplashHolder !=null){
            foxNativeSplashHolder.loadSplashAd(slotId,userId,this);
+//        使用本地素材方式（注：在后台勾选不是用推啊素材，否则不生效）
+//        foxNativeSplashHolder.loadCustomImage(slotId,userId,resId,this);
         }
     }
 
@@ -90,8 +92,8 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
     }
 
     @Override
-    public void onFailedToReceiveAd() {
-
+    public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+        Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
     }
 
     @Override

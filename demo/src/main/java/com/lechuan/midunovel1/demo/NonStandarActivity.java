@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
-import com.lechuan.midunovel.base.util.FoxBaseGsonUtil;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.FoxCustomerTm;
-import com.lechuan.midunovel.view.FoxNsTmListener;
-import com.lechuan.midunovel.view.video.bean.FoxResponseBean;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
+import com.lechuan.midunovel1.demo.utils.FoxGsonUtil;
+import com.mediamain.android.view.FoxCustomerTm;
+import com.mediamain.android.view.interfaces.FoxNsTmListener;
+import com.mediamain.android.view.video.bean.FoxResponseBean;
 
 
 /**
@@ -50,7 +50,7 @@ public class NonStandarActivity extends BaseActivity {
             public void onReceiveAd(String result) {
                 Log.d("========", "onReceiveAd:"+result);
                 if (!FoxBaseCommonUtils.isEmpty(result)){
-                    FoxResponseBean.DataBean dataBean = FoxBaseGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
+                    FoxResponseBean.DataBean dataBean = FoxGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
                     if (dataBean!=null){
                         mDataBean = dataBean;
                     }
@@ -62,8 +62,8 @@ public class NonStandarActivity extends BaseActivity {
             }
 
             @Override
-            public void onFailedToReceiveAd() {
-                Log.d("========", "onFailedToReceiveAd");
+            public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+                Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
             }
 
             @Override

@@ -16,8 +16,8 @@
 #   public *;
 #}
 -ignorewarnings
--dontwarn com.lechuan.midunovel.**
--keep class com.lechuan.midunovel.** { *; }
+-dontwarn com.mediamain.android.**
+-keep class com.mediamain.android.** { *; }
 
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.module.AppGlideModule

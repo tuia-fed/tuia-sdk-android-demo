@@ -6,17 +6,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lechuan.midunovel.demo.R;
-import com.mediamain.android.view.holder.FoxInfoAd;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
-import com.mediamain.android.view.holder.FoxNativeInfoHolder;
+import com.mediamain.android.view.holder.FoxTextLintAd;
+import com.mediamain.android.view.interfaces.FoxTextLinkHolder;
 
 /**
  * 信息流广告
  */
-public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolder.LoadInfoAdListener {
+public class TextLinkAdActivity extends BaseActivity implements FoxTextLinkHolder.LoadInfoAdListener {
 
     private LinearLayout mContainer;
-    private FoxNativeInfoHolder nativeInfoHolder;
+    private FoxTextLinkHolder nativeInfoHolder;
     private String userId;
     private int slotId;
 
@@ -29,8 +29,8 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
             userId = getIntent().getStringExtra("userId");
             slotId = getIntent().getIntExtra("slotId", 0);
         }
-        nativeInfoHolder = FoxNativeAdHelper.getNativeInfoHolder();
-        nativeInfoHolder.loadInfoAd(NativeAdActivity.this,slotId,userId,this);
+        nativeInfoHolder = FoxNativeAdHelper.getFoxTextLinkHolder();
+        nativeInfoHolder.loadInfoAd(TextLinkAdActivity.this,slotId,userId,this);
     }
 
     @Override
@@ -47,12 +47,12 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
     }
 
     @Override
-    public void infoAdSuccess(FoxInfoAd foxInfoAd) {
+    public void infoAdSuccess(FoxTextLintAd foxInfoAd) {
         View view = null;
         if (foxInfoAd != null) {
             view = foxInfoAd.getView();
         }
-        if (view != null && mContainer != null && !NativeAdActivity.this.isFinishing()) {
+        if (view != null && mContainer != null && !TextLinkAdActivity.this.isFinishing()) {
             mContainer.removeAllViews();
             mContainer.addView(view);
         }

@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.view.FoxListener;
-import com.lechuan.midunovel.view.FoxStreamerView;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
+import com.mediamain.android.view.FoxStreamerView;
+import com.mediamain.android.view.interfaces.FoxListener;
 
 
 public class BannerActivity extends BaseActivity {
@@ -32,8 +32,8 @@ public class BannerActivity extends BaseActivity {
             }
 
             @Override
-            public void onFailedToReceiveAd() {
-                Log.d("========", "onFailedToReceiveAd");
+            public void onFailedToReceiveAd(int errorCode, String errorMsg) {
+                Log.d("========", "onFailedToReceiveAd  Message="+errorMsg);
             }
 
             @Override
@@ -66,6 +66,8 @@ public class BannerActivity extends BaseActivity {
         });
 
         mTMBrAdView.loadAd(slotId,userId);
+//        使用本地素材方式（注：在后台勾选不是用推啊素材，否则不生效）
+//        mTMBrAdView.loadCustomImage(slotId,userId,resId);
     }
 
     @Override

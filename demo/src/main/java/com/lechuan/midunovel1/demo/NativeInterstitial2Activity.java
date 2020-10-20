@@ -7,18 +7,18 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.lechuan.midunovel.base.util.FoxBaseCommonUtils;
 import com.lechuan.midunovel.demo.R;
-import com.lechuan.midunovel.nativead.Ad;
-import com.lechuan.midunovel.nativead.DefaultAdCallBack;
-import com.lechuan.midunovel.nativead.bean.AdResponseBean;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
+import com.mediamain.android.nativead.Ad;
+import com.mediamain.android.nativead.DefaultAdCallBack;
+import com.mediamain.android.view.video.bean.FoxResponseBean;
 
 public class NativeInterstitial2Activity extends BaseActivity {
 
 
     private Ad ad;
     private String userId;
-    private AdResponseBean.DataBean mData;
+    private FoxResponseBean.DataBean mData;
     private int slotId;
 
     @Override
@@ -34,7 +34,7 @@ public class NativeInterstitial2Activity extends BaseActivity {
         ad = new Ad("4UycwwZv41rwzne1ZXgtQBgDSnPH", slotId + "", userId, "");
         ad.init(NativeInterstitial2Activity.this, null, Ad.AD_URL_NEW, new DefaultAdCallBack() {
             @Override
-            public void onReceiveAd(AdResponseBean.DataBean dataBean) {
+            public void onReceiveAd(FoxResponseBean.DataBean dataBean) {
                 super.onReceiveAd(dataBean);
                 mData = dataBean;
                 if (dataBean != null && !FoxBaseCommonUtils.isEmpty(dataBean.getImageUrl())) {
@@ -43,9 +43,6 @@ public class NativeInterstitial2Activity extends BaseActivity {
                     } else {
                         Glide.with(NativeInterstitial2Activity.this).load(dataBean.getImageUrl()).into(iv_image);
                     }
-                }
-                if(ad!=null){
-                    ad.adExposed();
                 }
             }
         });

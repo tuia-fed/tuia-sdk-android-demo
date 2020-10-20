@@ -5,7 +5,7 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import com.facebook.stetho.Stetho;
-import com.lechuan.midunovel.view.FoxSDK;
+import com.mediamain.android.view.base.FoxSDK;
 
 public class SdkApplication extends Application {
 
@@ -18,7 +18,7 @@ public class SdkApplication extends Application {
 //        }
 //        LeakCanary.install(this);
         Stetho.initializeWithDefaults(this);
-        FoxSDK.init(this);
+        FoxSDK.init(this,"4UycwwZv41rwzne1ZXgtQBgDSnPH","3WpyTLfifQyGhvgivxtUjvzXxtkzdceETBU2n5g");
     }
 
     @Override
