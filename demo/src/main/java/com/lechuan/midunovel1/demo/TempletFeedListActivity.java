@@ -15,12 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lechuan.midunovel.demo.R;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.lechuan.midunovel1.demo.widget.ILoadMoreListener;
 import com.lechuan.midunovel1.demo.widget.LoadMoreListView;
-import com.mediamain.android.base.util.FoxBaseCommonUtils;
-import com.mediamain.android.view.feed.IFoxTempletInfoFeedAd;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 import com.mediamain.android.view.holder.FoxTempletInfoFeedHolder;
+import com.mediamain.android.view.interfaces.IFoxTempletInfoFeedAd;
 
 import java.util.ArrayList;
 import java.util.List;

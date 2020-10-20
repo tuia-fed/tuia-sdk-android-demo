@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import com.lechuan.midunovel.demo.R;
 import com.mediamain.android.view.holder.FoxFloatingWebHolder;
-import com.mediamain.android.view.holder.FoxFloatingWebHolderImpl;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 
 /**
@@ -102,7 +101,7 @@ public class FloatTestActivity extends AppCompatActivity {
         boolean isConsumed = false;
         if (KeyEvent.KEYCODE_BACK == keyCode) {
             if (holder != null) {
-                isConsumed = ((FoxFloatingWebHolderImpl) holder).goBack();
+                isConsumed = holder.goBack();
             }
         }
         if (!isConsumed) {

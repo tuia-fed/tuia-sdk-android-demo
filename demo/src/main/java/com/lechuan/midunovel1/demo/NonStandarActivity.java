@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.demo.R;
-import com.mediamain.android.base.util.FoxBaseCommonUtils;
-import com.mediamain.android.base.util.FoxBaseGsonUtil;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
+import com.lechuan.midunovel1.demo.utils.FoxGsonUtil;
 import com.mediamain.android.view.FoxCustomerTm;
 import com.mediamain.android.view.interfaces.FoxNsTmListener;
 import com.mediamain.android.view.video.bean.FoxResponseBean;
@@ -50,7 +50,7 @@ public class NonStandarActivity extends BaseActivity {
             public void onReceiveAd(String result) {
                 Log.d("========", "onReceiveAd:"+result);
                 if (!FoxBaseCommonUtils.isEmpty(result)){
-                    FoxResponseBean.DataBean dataBean = FoxBaseGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
+                    FoxResponseBean.DataBean dataBean = FoxGsonUtil.GsonToBean(result,FoxResponseBean.DataBean.class);
                     if (dataBean!=null){
                         mDataBean = dataBean;
                     }

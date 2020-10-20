@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.demo.R;
-import com.mediamain.android.base.util.FoxBaseCommonUtils;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.mediamain.android.view.FoxStreamerView;
 import com.mediamain.android.view.interfaces.FoxListener;
 

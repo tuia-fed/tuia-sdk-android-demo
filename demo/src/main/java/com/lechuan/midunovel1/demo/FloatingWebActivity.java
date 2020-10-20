@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.lechuan.midunovel.demo.R;
-import com.mediamain.android.base.util.FoxBaseCommonUtils;
 
 /**
  * author: likaixuan
@@ -44,12 +43,12 @@ public class FloatingWebActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String appKey = appKeyEdt.getText().toString().trim();
                 String appSecret = appSecretEdt.getText().toString().trim();
-                if (TextUtils.isEmpty(appKey)) {
-                    appKey = FoxBaseCommonUtils.getAppKey();
-                }
-                if (TextUtils.isEmpty(appSecret)) {
-                    appSecret= FoxBaseCommonUtils.getAppSecret();
-                }
+//                if (TextUtils.isEmpty(appKey)) {
+//                    appKey = FoxBaseCommonUtils.getAppKey();
+//                }
+//                if (TextUtils.isEmpty(appSecret)) {
+//                    appSecret= FoxBaseCommonUtils.getAppSecret();
+//                }
                 String slotIdStr = slotIdEdt.getText().toString().trim();
                 int slotId = TextUtils.isEmpty(slotIdStr) ? 0 : Integer.parseInt(slotIdStr);
                 String left = leftEdit.getText().toString().trim();

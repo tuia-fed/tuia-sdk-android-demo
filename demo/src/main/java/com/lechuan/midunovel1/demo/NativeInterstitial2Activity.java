@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.lechuan.midunovel.demo.R;
-import com.mediamain.android.base.util.FoxBaseCommonUtils;
+import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.mediamain.android.nativead.Ad;
 import com.mediamain.android.nativead.DefaultAdCallBack;
 import com.mediamain.android.view.video.bean.FoxResponseBean;
