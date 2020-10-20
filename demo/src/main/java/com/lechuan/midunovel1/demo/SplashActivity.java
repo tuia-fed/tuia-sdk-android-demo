@@ -55,6 +55,8 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         if (foxNativeSplashHolder !=null){
            foxNativeSplashHolder.loadSplashAd(slotId,userId,this);
+//        使用本地素材方式（注：在后台勾选不是用推啊素材，否则不生效）
+//        foxNativeSplashHolder.loadCustomImage(slotId,userId,resId,this);
         }
     }
 

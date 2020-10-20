@@ -76,6 +76,8 @@ public class DobberActivity extends BaseActivity {
 
         });
         mOxWallView.loadAd(slotId,userId);
+//        使用本地素材方式（注：在后台勾选不是用推啊素材，否则不生效）
+//        mOxWallView.loadCustomImage(slotId,userId,resId);
     }
 
     @Override

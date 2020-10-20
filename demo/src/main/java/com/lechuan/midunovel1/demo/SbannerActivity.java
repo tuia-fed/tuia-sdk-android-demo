@@ -68,6 +68,8 @@ public class SbannerActivity extends BaseActivity {
             }
         });
         mTMBrAdView.loadAd(slotId,userId);//加载对应GGid
+//        使用本地素材方式（注：在后台勾选不是用推啊素材，否则不生效）
+//        mTMBrAdView.loadCustomImage(slotId,userId,resId);
     }
 
     @Override
