@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.TMItButton258092).setOnClickListener(this);
         findViewById(R.id.TMBrButton).setOnClickListener(this);
         findViewById(R.id.floatButton).setOnClickListener(this);
-        findViewById(R.id.nsButton).setOnClickListener(this);
         findViewById(R.id.nsCPButton).setOnClickListener(this);
         findViewById(R.id.nsCP2Button).setOnClickListener(this);
         findViewById(R.id.textLinkButton).setOnClickListener(this);
@@ -67,23 +66,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, TextLinkAdActivity.class);
                 intent.putExtra("slotId", 347174);
                 break;
-            case R.id.nsButton:
-                //自定义
-                intent = new Intent(this, NonStandarActivity.class);
-                intent.putExtra("slotId", 323780);
-                break;
             case R.id.nsCPButton:
-                //自定义
+                //原生插屏
                 intent = new Intent(this, NativeInterstitialActivity.class);
                 intent.putExtra("slotId", 331946);
                 break;
             case R.id.nsCP2Button:
-                //自定义
+                //原生插屏
                 intent = new Intent(this, NativeInterstitial2Activity.class);
                 intent.putExtra("slotId", 331946);
                 break;
             case R.id.btn_float_plus:
-                //自定义
+                //悬浮升级
                 intent = new Intent(this, FloatingWebActivity.class);
                 break;
             default:
