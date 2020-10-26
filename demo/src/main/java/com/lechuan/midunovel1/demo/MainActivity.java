@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("slotId", 323778);
                 break;
             case R.id.floatButton:
-                //浮标
+                //icon
                 intent = new Intent(this, DobberActivity.class);
                 intent.putExtra("slotId", 323779);
                 break;
