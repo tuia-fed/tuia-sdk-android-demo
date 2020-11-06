@@ -90,6 +90,21 @@ public class FloatTestActivity extends AppCompatActivity {
             }
 
             @Override
+            public void onAdClick() {
+                //素材点击
+            }
+
+            @Override
+            public void onCloseClick() {
+                //素材关闭
+            }
+
+            @Override
+            public void onAdActivityClose(String s) {
+                //活动点击
+            }
+
+            @Override
             public void onAdMessage(String data) {
 
             }
