@@ -18,6 +18,7 @@ import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.lechuan.midunovel1.demo.widget.ILoadMoreListener;
 import com.lechuan.midunovel1.demo.widget.LoadMoreListView;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 import com.mediamain.android.view.holder.FoxTempletInfoFeedHolder;
 import com.mediamain.android.view.interfaces.IFoxTempletInfoFeedAd;
@@ -186,6 +187,11 @@ public class TempletFeedListActivity extends Activity {
                 if (!FoxBaseCommonUtils.isEmpty(data)) {
                     Toast.makeText(TempletFeedListActivity.this, "奖励内容：" + data, Toast.LENGTH_SHORT).show();
                 }
+            }
+
+            @Override
+            public void onAdMessage(MessageData messageData) {
+
             }
         });
 

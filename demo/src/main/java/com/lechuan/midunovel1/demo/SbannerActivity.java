@@ -8,6 +8,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.mediamain.android.view.FoxStreamerView;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.interfaces.FoxListener;
 
 /**
@@ -65,6 +66,11 @@ public class SbannerActivity extends BaseActivity {
                 if (!FoxBaseCommonUtils.isEmpty(s)){
                     ToastUtils.showShort(s);
                 }
+            }
+
+            @Override
+            public void onAdMessage(MessageData messageData) {
+
             }
         });
         mTMBrAdView.loadAd(slotId,userId);//加载对应GGid

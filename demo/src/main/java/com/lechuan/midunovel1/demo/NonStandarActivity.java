@@ -10,8 +10,9 @@ import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.lechuan.midunovel1.demo.utils.FoxGsonUtil;
 import com.mediamain.android.view.FoxCustomerTm;
+import com.mediamain.android.view.bean.FoxResponseBean;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.interfaces.FoxNsTmListener;
-import com.mediamain.android.view.video.bean.FoxResponseBean;
 
 
 /**
@@ -72,6 +73,11 @@ public class NonStandarActivity extends BaseActivity {
                 if (!FoxBaseCommonUtils.isEmpty(s)){
                     ToastUtils.showShort(s);
                 }
+            }
+
+            @Override
+            public void onAdMessage(MessageData messageData) {
+
             }
 
         });

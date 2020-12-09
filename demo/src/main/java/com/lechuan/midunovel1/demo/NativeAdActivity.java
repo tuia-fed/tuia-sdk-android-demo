@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lechuan.midunovel.demo.R;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.holder.FoxInfoAd;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 import com.mediamain.android.view.holder.FoxNativeInfoHolder;
@@ -90,6 +91,11 @@ public class NativeAdActivity extends BaseActivity implements FoxNativeInfoHolde
 
     @Override
     public void onAdActivityClose(String data) {
+
+    }
+
+    @Override
+    public void onAdMessage(MessageData messageData) {
 
     }
 
