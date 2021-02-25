@@ -11,7 +11,7 @@ import com.lechuan.midunovel.demo.R;
 import com.lechuan.midunovel1.demo.utils.FoxBaseCommonUtils;
 import com.mediamain.android.nativead.Ad;
 import com.mediamain.android.nativead.DefaultAdCallBack;
-import com.mediamain.android.view.video.bean.FoxResponseBean;
+import com.mediamain.android.view.bean.FoxResponseBean;
 
 public class NativeInterstitial2Activity extends BaseActivity {
 

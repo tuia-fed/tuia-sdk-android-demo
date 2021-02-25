@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.lechuan.midunovel.demo.R;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 import com.mediamain.android.view.holder.FoxNativeSplashHolder;
 import com.mediamain.android.view.holder.FoxSplashAd;
@@ -120,6 +121,11 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onAdActivityClose(String data) {
         jumpMain();
+    }
+
+    @Override
+    public void onAdMessage(MessageData messageData) {
+
     }
 }
 

@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="浮标广告" />
+                android:text="Icon广告" />
 
             <Button
                 android:id="@+id/textLinkButton"

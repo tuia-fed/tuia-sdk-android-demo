@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lechuan.midunovel.demo.R;
+import com.mediamain.android.view.bean.MessageData;
 import com.mediamain.android.view.holder.FoxFloatingWebHolder;
 import com.mediamain.android.view.holder.FoxNativeAdHelper;
 
@@ -75,6 +76,12 @@ public class FloatTestActivity extends AppCompatActivity {
                 requestFloatingWebAd();
             }
         });
+        findViewById(R.id.btn_hint).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.hide();
+            }
+        });
     }
 
     private void requestFloatingWebAd() {
@@ -90,9 +97,25 @@ public class FloatTestActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onAdMessage(String data) {
+            public void onAdClick() {
+                //素材点击
+            }
+
+            @Override
+            public void onCloseClick() {
+                //素材关闭
+            }
+
+            @Override
+            public void onAdActivityClose(String s) {
+                //活动点击
+            }
+
+            @Override
+            public void onAdMessage(MessageData messageData) {
 
             }
+
         });
     }
 
