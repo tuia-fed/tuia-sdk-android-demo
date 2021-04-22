@@ -4,8 +4,7 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://dl.bintray.com/sunjiangrong/maven" }
-        maven { url "https://jitpack.io" }
+        maven { url "http://nexus.dui88.com:8081/nexus/content/groups/public/" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
@@ -23,8 +22,7 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://dl.bintray.com/sunjiangrong/maven" }
-        maven { url "https://jitpack.io" }
+        maven { url "http://nexus.dui88.com:8081/nexus/content/groups/public/" }
     }
 }
 

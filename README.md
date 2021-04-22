@@ -1,6 +1,6 @@
 # 推啊Android SDK——接入说明文档
 
     
-  [推啊SDK对接指南](http://note.youdao.com/noteshare?id=697889f4db8bee05d581a5ffe1f0c6b1&sub=E6F008D4FACF4D149599F208746BF11A)
+  [推啊SDK对接指南](http://note.youdao.com/noteshare?id=ccffc76bad0cc3c693c146c6996ab8dc&sub=1D4A79C99D7D4F73BEED8553CBCBA4A8)
   
   

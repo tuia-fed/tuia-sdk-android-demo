@@ -20,7 +20,7 @@ android {
     buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.lechuan.midunovel.demo"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -71,7 +71,7 @@ allprojects {
 dependencies {
 //    compile fileTree(include: ['*.jar'], dir: 'libs')
 //    implementation files('libs/miit_mdid_1.0.13.aar')
-    implementation('com.tuia:sdk:3.+') {
+    implementation('com.tuia.android:sdk:3.+') {
         changing true
     }
 
