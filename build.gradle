@@ -4,8 +4,6 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://dl.bintray.com/sunjiangrong/maven" }
-        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
@@ -23,8 +21,16 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://dl.bintray.com/sunjiangrong/maven" }
-        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '609df2613c458713ddb9bee9'
+                password '5E_ZurpoLS_B'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2102996-release-z1w4uP/'
+        }
     }
 }
 
